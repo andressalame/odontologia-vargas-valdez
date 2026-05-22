@@ -20,7 +20,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- ====== DATOS PARA GOOGLE (Schema.org) — mejora el SEO local ====== -->
 <!-- [CONFIRMAR] Rellena dirección exacta y horarios reales antes de publicar -->
@@ -60,18 +60,25 @@
 
 <style>
   :root{
-    --teal:#0e7c7b;
-    --teal-deep:#0a5b5a;
-    --teal-darker:#063d3c;
-    --teal-soft:#e6f2f1;
-    --teal-mist:#f2f8f7;
-    --ink:#12302f;
-    --paper:#fbfaf6;
+    /* ===== PALETA DE MARCA (turquesa + gris, igual al logo) ===== */
+    --teal:#2ea596;          /* turquesa principal (botones, acentos) */
+    --teal-bright:#3dbcab;   /* turquesa claro (brillos) */
+    --teal-deep:#1d8377;     /* turquesa profundo (CTA, fondos) */
+    --teal-darker:#11534b;   /* fondo oscuro */
+    --teal-soft:#e3f3f0;
+    --teal-mist:#f1f8f6;
+    /* gris de marca (secundario) */
+    --grey:#8e9794;
+    --grey-deep:#6b7472;
+    /* neutros */
+    --ink:#283635;           /* texto y secciones oscuras (gris-teal oscuro) */
+    --paper:#fbfbf9;
     --white:#ffffff;
-    --gold:#c08a3e;
-    --gold-soft:#f3e6cf;
-    --muted:#5e716f;
-    --line:#dde7e5;
+    --muted:#5f6b69;
+    --line:#dde6e4;
+    /* compatibilidad: el antiguo acento "dorado" ahora es turquesa de marca */
+    --gold:var(--teal-deep);
+    --gold-soft:#cdeee8;     /* menta clara para texto sobre fondos oscuros */
   }
   *{box-sizing:border-box;margin:0;padding:0;}
   html{scroll-behavior:smooth;}
@@ -82,7 +89,7 @@
     line-height:1.7;
     overflow-x:hidden;
   }
-  h1,h2,h3,.display{font-family:'Fraunces',Georgia,serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;}
+  h1,h2,h3,.display{font-family:'Montserrat',system-ui,sans-serif;font-weight:700;line-height:1.14;letter-spacing:-.02em;}
   a{color:inherit;text-decoration:none;}
   img{max-width:100%;display:block;}
   .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
@@ -112,12 +119,12 @@
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
   .brand{display:flex;align-items:center;gap:12px;}
   .brand-mark{
-    width:42px;height:42px;border-radius:50%;background:var(--teal);color:#fff;
-    display:flex;align-items:center;justify-content:center;font-family:'Fraunces',serif;
-    font-weight:700;font-size:1.45rem;flex-shrink:0;
+    width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);
+    display:flex;align-items:center;justify-content:center;flex-shrink:0;overflow:hidden;
   }
+  .brand-mark svg{width:30px;height:30px;display:block;}
   .brand-text{line-height:1.05;}
-  .brand-text strong{font-family:'Fraunces',serif;font-size:1.08rem;display:block;color:var(--ink);}
+  .brand-text strong{font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:1.05rem;display:block;color:var(--ink);letter-spacing:-.01em;}
   .brand-text span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
   .nav-links{display:flex;align-items:center;gap:32px;}
   .nav-links a.lnk{font-weight:600;font-size:.95rem;color:var(--muted);transition:color .2s;}
@@ -152,11 +159,11 @@
     background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.16);
     border-radius:22px;padding:34px;backdrop-filter:blur(6px);
   }
-  .hero-card .est{font-family:'Fraunces',serif;font-size:3.6rem;color:var(--gold-soft);line-height:1;}
-  .hero-card .est small{font-size:1rem;display:block;color:rgba(255,255,255,.7);font-family:'Mulish';letter-spacing:.05em;margin-top:6px;}
+  .hero-card .est{font-family:'Montserrat',system-ui,sans-serif;font-size:3.6rem;color:var(--gold-soft);line-height:1;}
+  .hero-card .est small{font-size:1rem;display:block;color:rgba(255,255,255,.85);font-family:'Mulish';letter-spacing:.05em;margin-top:6px;}
   .hero-card hr{border:none;border-top:1px solid rgba(255,255,255,.15);margin:24px 0;}
-  .hero-card .quote{font-family:'Fraunces',serif;font-style:italic;font-size:1.15rem;color:#fff;}
-  .hero-card .quote-by{font-size:.85rem;color:rgba(255,255,255,.65);margin-top:10px;}
+  .hero-card .quote{font-family:'Montserrat',system-ui,sans-serif;font-style:italic;font-size:1.15rem;color:#fff;}
+  .hero-card .quote-by{font-size:.85rem;color:rgba(255,255,255,.82);margin-top:10px;}
   @media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:40px;}.hero{padding:64px 0 80px;}}
 
   /* ============ TRUST STRIP ============ */
@@ -165,7 +172,7 @@
   .trust-item{padding:30px 24px;text-align:center;border-right:1px solid var(--line);}
   .trust-item:last-child{border-right:none;}
   .trust-item .ti-ico{font-size:1.8rem;margin-bottom:8px;}
-  .trust-item strong{font-family:'Fraunces',serif;font-size:1.05rem;display:block;}
+  .trust-item strong{font-family:'Montserrat',system-ui,sans-serif;font-size:1.05rem;display:block;}
   .trust-item span{font-size:.86rem;color:var(--muted);}
   @media(max-width:760px){.trust-grid{grid-template-columns:repeat(2,1fr);}
     .trust-item{border-bottom:1px solid var(--line);}
@@ -191,7 +198,7 @@
     padding:48px;color:#fff;position:relative;overflow:hidden;}
   .reassure-visual::after{content:"";position:absolute;right:-50px;bottom:-50px;width:180px;height:180px;
     border-radius:50%;border:1.5px solid rgba(255,255,255,.12);}
-  .reassure-visual .big{font-family:'Fraunces',serif;font-size:1.6rem;line-height:1.3;margin-bottom:20px;}
+  .reassure-visual .big{font-family:'Montserrat',system-ui,sans-serif;font-size:1.6rem;line-height:1.3;margin-bottom:20px;}
   @media(max-width:860px){.reassure-grid{grid-template-columns:1fr;gap:40px;}}
 
   /* ============ SERVICIOS ============ */
@@ -220,7 +227,7 @@
   .tl-item{position:relative;margin-bottom:30px;}
   .tl-item::before{content:"";position:absolute;left:-37px;top:5px;width:13px;height:13px;border-radius:50%;
     background:var(--gold);border:3px solid var(--ink);}
-  .tl-item .yr{font-family:'Fraunces',serif;font-size:1.5rem;color:var(--gold-soft);}
+  .tl-item .yr{font-family:'Montserrat',system-ui,sans-serif;font-size:1.5rem;color:var(--gold-soft);}
   .tl-item p{color:rgba(251,250,246,.72);margin:4px 0 0;font-size:1rem;}
   @media(max-width:860px){.legacy-grid{grid-template-columns:1fr;gap:44px;}}
 
@@ -241,7 +248,7 @@
   .info-list li{display:flex;gap:16px;align-items:flex-start;margin-bottom:22px;}
   .info-list .ico{width:46px;height:46px;border-radius:12px;background:rgba(255,255,255,.1);
     display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
-  .info-list .lab{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.6);}
+  .info-list .lab{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:rgba(255,255,255,.82);}
   .info-list .val{font-size:1.08rem;font-weight:600;}
   .info-list a.val:hover{color:var(--gold-soft);}
   .contact-card{background:var(--white);color:var(--ink);border-radius:24px;padding:42px;text-align:center;
@@ -262,7 +269,7 @@
   .foot-social a{width:42px;height:42px;border-radius:50%;border:1px solid rgba(255,255,255,.2);
     display:flex;align-items:center;justify-content:center;transition:background .2s,border-color .2s;color:#fff;}
   .foot-social a:hover{background:var(--teal);border-color:var(--teal);}
-  .foot-links h4{font-family:'Fraunces',serif;color:#fff;font-size:1.05rem;margin-bottom:14px;}
+  .foot-links h4{font-family:'Montserrat',system-ui,sans-serif;color:#fff;font-size:1.05rem;margin-bottom:14px;}
   .foot-links a{display:block;font-size:.95rem;margin-bottom:9px;transition:color .2s;}
   .foot-links a:hover{color:var(--gold-soft);}
   .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:24px;
@@ -286,7 +293,7 @@
 <header class="nav">
   <div class="wrap nav-inner">
     <a href="#inicio" class="brand">
-      <div class="brand-mark">V</div>
+      <div class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Vargas Valdez"><path d="M30 17 L40.5 45 L46 45 L33.5 14 Z" fill="#9ba4a2"/><path d="M46.5 17 L51.5 17 L43 39 L40 31 Z" fill="#9ba4a2"/><path d="M15 13 L26.5 43 L32 43 L18.5 10 Z" fill="#34b5a4"/><path d="M32 13 L37.5 13 L28.5 36 L25 27 Z" fill="#34b5a4"/></svg></div>
       <div class="brand-text">
         <strong>Odontología Vargas Valdez</strong>
         <span>Especialistas Asociados</span>
@@ -296,6 +303,7 @@
       <a class="lnk" href="#nosotros">Nosotros</a>
       <a class="lnk" href="#servicios">Servicios</a>
       <a class="lnk" href="#tecnologia">Tecnología</a>
+      <a class="lnk" href="blog.html">Blog</a>
       <a class="lnk" href="#contacto">Contacto</a>
       <a class="btn btn-dark" href="https://wa.me/51987484791" target="_blank" rel="noopener">Agendar cita</a>
     </nav>
@@ -352,7 +360,7 @@
     </div>
     <div class="reassure-visual reveal">
       <p class="big">"Lo que más valoran nuestros pacientes no es solo el resultado: es sentirse en confianza."</p>
-      <p style="color:rgba(255,255,255,.75);font-size:1rem;">Tu primera visita siempre empieza con una conversación. Cuéntanos qué te preocupa y lo revisamos juntos.</p>
+      <p style="color:rgba(255,255,255,.9);font-size:1rem;">Tu primera visita siempre empieza con una conversación. Cuéntanos qué te preocupa y lo revisamos juntos.</p>
       <a class="btn btn-wa" style="margin-top:24px;" href="https://wa.me/51987484791" target="_blank" rel="noopener">Escríbenos por WhatsApp</a>
     </div>
   </div>
@@ -500,7 +508,7 @@
   <div class="wrap foot-grid">
     <div class="foot-brand">
       <div class="brand">
-        <div class="brand-mark" style="background:var(--teal);">V</div>
+        <div class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Vargas Valdez"><path d="M30 17 L40.5 45 L46 45 L33.5 14 Z" fill="#9ba4a2"/><path d="M46.5 17 L51.5 17 L43 39 L40 31 Z" fill="#9ba4a2"/><path d="M15 13 L26.5 43 L32 43 L18.5 10 Z" fill="#34b5a4"/><path d="M32 13 L37.5 13 L28.5 36 L25 27 Z" fill="#34b5a4"/></svg></div>
         <div class="brand-text">
           <strong>Odontología Vargas Valdez</strong>
           <span>Especialistas Asociados</span>
@@ -521,6 +529,7 @@
       <a href="#nosotros">Nosotros</a>
       <a href="#servicios">Servicios</a>
       <a href="#tecnologia">Tecnología</a>
+      <a href="blog.html">Blog</a>
       <a href="#contacto">Contacto</a>
     </div>
     <div class="foot-links">

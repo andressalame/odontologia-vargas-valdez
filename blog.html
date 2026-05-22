@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Blog | Odontología Vargas Valdez · Salud bucal en Jesús María, Lima</title>
+<meta name="description" content="Próximamente: artículos sobre salud bucal, blanqueamiento, caries, bruxismo y más, explicados de forma simple por los especialistas de Odontología Vargas Valdez en Lima.">
+<link rel="canonical" href="https://www.TUDOMINIO.com/blog.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --teal:#2ea596;--teal-bright:#3dbcab;--teal-deep:#1d8377;--teal-darker:#11534b;--teal-soft:#e3f3f0;--teal-mist:#f1f8f6;
+    --grey:#8e9794;--grey-deep:#6b7472;
+    --ink:#283635;--paper:#fbfbf9;--white:#fff;--gold:#1d8377;--gold-soft:#cdeee8;--muted:#5f6b69;--line:#dde6e4;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{font-family:'Mulish',system-ui,sans-serif;color:var(--ink);background:var(--paper);line-height:1.7;}
+  h1,h2,h3{font-family:'Montserrat',system-ui,sans-serif;font-weight:600;line-height:1.12;letter-spacing:-.01em;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 24px;}
+  .eyebrow{text-transform:uppercase;letter-spacing:.18em;font-size:.74rem;font-weight:700;color:var(--gold);margin-bottom:14px;}
+  .btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:.98rem;padding:14px 28px;border-radius:40px;transition:transform .25s,box-shadow .25s;cursor:pointer;border:none;}
+  .btn-wa{background:var(--gold);color:#fff;box-shadow:0 10px 24px -10px rgba(192,138,62,.7);}
+  .btn-wa:hover{transform:translateY(-3px);}
+  .btn-dark{background:var(--teal-deep);color:#fff;}
+  .btn-dark:hover{transform:translateY(-3px);}
+
+  /* NAV */
+  header.nav{position:sticky;top:0;z-index:100;background:rgba(251,250,246,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line);}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:72px;}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand-mark{width:44px;height:44px;border-radius:50%;background:#fff;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .brand-mark svg{width:30px;height:30px;display:block;}
+  .brand-text strong{font-family:'Montserrat',system-ui,sans-serif;font-weight:700;font-size:1.05rem;display:block;color:var(--ink);letter-spacing:-.01em;}
+  .brand-text span{font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+  .nav-links{display:flex;align-items:center;gap:32px;}
+  .nav-links a.lnk{font-weight:600;font-size:.95rem;color:var(--muted);transition:color .2s;}
+  .nav-links a.lnk:hover,.nav-links a.lnk.active{color:var(--teal);}
+  @media(max-width:760px){.nav-links .lnk{display:none;}}
+
+  /* HERO BLOG */
+  .blog-hero{background:radial-gradient(ellipse at 80% -10%, rgba(192,138,62,.14), transparent 50%),linear-gradient(160deg,var(--teal-deep),var(--teal-darker));color:#fff;padding:96px 0 104px;text-align:center;position:relative;overflow:hidden;}
+  .blog-hero::before{content:"";position:absolute;right:-120px;top:-80px;width:420px;height:420px;border-radius:50%;border:1.5px solid rgba(255,255,255,.08);}
+  .blog-hero .eyebrow{color:var(--gold-soft);}
+  .blog-hero h1{font-size:clamp(2.3rem,5vw,3.4rem);max-width:18ch;margin:0 auto 20px;}
+  .blog-hero h1 em{font-style:italic;color:var(--gold-soft);}
+  .blog-hero p{font-size:1.15rem;color:rgba(255,255,255,.9);max-width:52ch;margin:0 auto 34px;position:relative;z-index:2;}
+
+  /* PRÓXIMAMENTE */
+  .soon{padding:80px 0;}
+  .soon-card{background:var(--white);border:1px solid var(--line);border-radius:24px;padding:54px 44px;text-align:center;max-width:720px;margin:0 auto;box-shadow:0 22px 50px -30px rgba(10,91,90,.4);}
+  .soon-card .ico{font-size:3rem;margin-bottom:18px;}
+  .soon-card h2{font-size:1.9rem;margin-bottom:14px;}
+  .soon-card p{color:var(--muted);font-size:1.06rem;max-width:48ch;margin:0 auto 28px;}
+
+  /* PRÓXIMOS TEMAS */
+  .topics{margin-top:54px;}
+  .topics h3{text-align:center;font-size:1.4rem;margin-bottom:8px;}
+  .topics .sub{text-align:center;color:var(--muted);margin-bottom:34px;}
+  .topics-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+  .topic{background:var(--teal-mist);border:1px solid var(--teal-soft);border-radius:16px;padding:26px;transition:transform .25s;}
+  .topic:hover{transform:translateY(-4px);}
+  .topic .tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:700;color:var(--teal);}
+  .topic h4{font-family:'Montserrat',system-ui,sans-serif;font-size:1.12rem;margin:8px 0 6px;}
+  .topic p{color:var(--muted);font-size:.93rem;}
+  @media(max-width:860px){.topics-grid{grid-template-columns:1fr;}}
+
+  /* FOOTER */
+  footer{background:var(--ink);color:rgba(251,250,246,.72);padding:48px 0 28px;margin-top:80px;}
+  .foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:24px;align-items:center;}
+  .foot-grid .brand-text strong{color:#fff;}
+  .foot-social{display:flex;gap:12px;}
+  .foot-social a{width:40px;height:40px;border-radius:50%;border:1px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;color:#fff;transition:background .2s;}
+  .foot-social a:hover{background:var(--teal);}
+  .foot-bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:22px;text-align:center;font-size:.85rem;color:rgba(251,250,246,.5);}
+
+  .wa-float{position:fixed;right:22px;bottom:22px;z-index:200;width:60px;height:60px;border-radius:50%;background:#25D366;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px -8px rgba(37,211,102,.7);transition:transform .25s;}
+  .wa-float:hover{transform:scale(1.08);}
+  .wa-float svg{width:32px;height:32px;fill:#fff;}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Vargas Valdez"><path d="M30 17 L40.5 45 L46 45 L33.5 14 Z" fill="#9ba4a2"/><path d="M46.5 17 L51.5 17 L43 39 L40 31 Z" fill="#9ba4a2"/><path d="M15 13 L26.5 43 L32 43 L18.5 10 Z" fill="#34b5a4"/><path d="M32 13 L37.5 13 L28.5 36 L25 27 Z" fill="#34b5a4"/></svg></div>
+      <div class="brand-text">
+        <strong>Odontología Vargas Valdez</strong>
+        <span>Especialistas Asociados</span>
+      </div>
+    </a>
+    <nav class="nav-links">
+      <a class="lnk" href="index.html#nosotros">Nosotros</a>
+      <a class="lnk" href="index.html#servicios">Servicios</a>
+      <a class="lnk" href="index.html#tecnologia">Tecnología</a>
+      <a class="lnk active" href="blog.html">Blog</a>
+      <a class="btn btn-dark" href="https://wa.me/51987484791" target="_blank" rel="noopener">Agendar cita</a>
+    </nav>
+  </div>
+</header>
+
+<section class="blog-hero">
+  <div class="wrap">
+    <p class="eyebrow">Blog de salud bucal</p>
+    <h1>Tus dudas dentales, <em>respondidas en simple</em></h1>
+    <p>Estamos preparando artículos claros y honestos sobre tu salud bucal: sin tecnicismos, escritos por quienes llevan generaciones cuidando sonrisas en Lima.</p>
+    <a class="btn btn-wa" href="https://wa.me/51987484791" target="_blank" rel="noopener">Mientras tanto, escríbenos por WhatsApp</a>
+  </div>
+</section>
+
+<section class="soon">
+  <div class="wrap">
+    <div class="soon-card">
+      <div class="ico">📝</div>
+      <h2>Próximamente</h2>
+      <p>Muy pronto encontrarás aquí guías para entender mejor tu boca y tomar buenas decisiones. ¿Tienes una duda que no puede esperar? Escríbenos y te orientamos (recuerda que toda recomendación final requiere una evaluación presencial).</p>
+      <a class="btn btn-dark" href="index.html">← Volver al inicio</a>
+    </div>
+
+    <div class="topics">
+      <h3>Algunos temas que vienen en camino</h3>
+      <p class="sub">Pensados para responder lo que más se preguntan nuestros pacientes</p>
+      <div class="topics-grid">
+        <div class="topic">
+          <span class="tag">Estética</span>
+          <h4>¿Duele el blanqueamiento dental?</h4>
+          <p>Qué esperar realmente y cómo saber si tu boca está lista para hacerlo.</p>
+        </div>
+        <div class="topic">
+          <span class="tag">Prevención</span>
+          <h4>Caries sin dolor: la más peligrosa</h4>
+          <p>Por qué la caries que no sientes es la que más debe preocuparte.</p>
+        </div>
+        <div class="topic">
+          <span class="tag">Salud</span>
+          <h4>¿Por qué me duele la mandíbula?</h4>
+          <p>Señales de bruxismo y problemas de mordida, y cuándo consultar.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot-grid">
+    <a href="index.html" class="brand">
+      <div class="brand-mark"><svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="Logo Vargas Valdez"><path d="M30 17 L40.5 45 L46 45 L33.5 14 Z" fill="#9ba4a2"/><path d="M46.5 17 L51.5 17 L43 39 L40 31 Z" fill="#9ba4a2"/><path d="M15 13 L26.5 43 L32 43 L18.5 10 Z" fill="#34b5a4"/><path d="M32 13 L37.5 13 L28.5 36 L25 27 Z" fill="#34b5a4"/></svg></div>
+      <div class="brand-text">
+        <strong>Odontología Vargas Valdez</strong>
+        <span>Jesús María, Lima — Perú</span>
+      </div>
+    </a>
+    <div class="foot-social">
+      <a href="https://www.instagram.com/odontologiavargasv" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=61588420507476" target="_blank" rel="noopener" aria-label="Facebook">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h2V5h-2c-2 0-3 1-3 3v2H9v3h2v6h3v-6h2l1-3h-3V8c0-.5.3-1 1-1z"/></svg>
+      </a>
+    </div>
+  </div>
+  <div class="wrap foot-bottom">
+    © <span id="year"></span> Odontología Vargas Valdez · Jesús María, Lima — Perú.
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/51987484791" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-1.7-.8-2.8-1.5-3.9-3.4-.3-.5.3-.5.8-1.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-1-2.3-.2-.5-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.2.2 2.1 3.3 5.2 4.6 2 .8 2.7.9 3.7.8.6-.1 1.7-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+</a>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
