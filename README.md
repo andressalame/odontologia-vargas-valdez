@@ -34,3 +34,7 @@ GitHub Pages confirmado por API de solo lectura el 7-oct: repositorio `andressal
 5. Solo después de la comprobación pública y aceptación del consultorio, considerar el borrador de reseña. No declarar publicado ni entregado por el commit.
 
 Para revertir una publicación aprobada, preparar y revisar `git revert <commit-de-la-mejora>` y publicar el revert; no reset destructivo ni force push. El respaldo anterior completo está en la carpeta de evidencia.
+
+## Foto del equipo · 7-oct-2026
+
+Portada original del reel DWCXFl8EeSU descargada desde la cuadrícula oficial de Instagram: 3375 × 6000 px, sin control de play. Recorte (0,1570,3375,6000) para retirar texto superior; sin inpainting, rostros generados ni cambios corporales. WebP 864 × 1134, 86.570 bytes. Pie fuera de la foto para conservar el encuadre y contraste. Carga prioritaria por estar en el hero de escritorio. Push inmediato autorizado expresamente para este encargo; comprobar publicación en el dominio tras el push.
