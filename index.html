@@ -27,22 +27,9 @@
 <!-- ====== TIPOGRAFÍAS AUTO-ALOJADAS (nunca desde Google Fonts) ====== -->
 <link rel="preload" href="fonts/lora.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/publicsans.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="estilo.css">
+<link rel="stylesheet" href="estilo.css?v=20261007">
 
-<!-- ============================================================
-     GOOGLE ANALYTICS 4
-     REEMPLAZA G-RDZCFR4JHZ POR EL ID REAL DE LA PROPIEDAD.
-        Está en Analytics → Administrar → Flujos de datos → Web.
-        El mismo ID va en las 10 páginas (index + los 9 del blog).
-     ============================================================ -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDZCFR4JHZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-RDZCFR4JHZ');
-  document.addEventListener('click', function(e){ var a = e.target.closest('a[href*="wa.me"],a[href*="api.whatsapp.com"]'); if (!a) return; gtag('event', 'clic_whatsapp', { page_path: location.pathname }); }, true);
-</script>
+<script defer src="analytics.js"></script>
 
 <!-- ====== DATOS PARA GOOGLE (Schema.org) ====== -->
 <script type="application/ld+json">
@@ -65,31 +52,58 @@
   "email": "odontologiavargasvaldez@gmail.com",
   "url": "https://www.odontologiavargasvaldez.com/",
   "image": "https://www.odontologiavargasvaldez.com/apple-touch-icon.png",
-  "priceRange": "$$",
   "currenciesAccepted": "PEN",
   "address": {
     "@type": "PostalAddress",
     "addressLocality": "Jesús María",
     "addressRegion": "Lima",
-    "addressCountry": "PE"
+    "addressCountry": "PE",
+    "streetAddress": "Las Palmeras 103, Residencial San Felipe",
+    "postalCode": "15076"
   },
   "areaServed": [
-    {"@type":"City","name":"Jesús María"},
-    {"@type":"City","name":"Lima"}
+    {
+      "@type": "City",
+      "name": "Jesús María"
+    },
+    {
+      "@type": "City",
+      "name": "Lima"
+    }
   ],
   "knowsLanguage": "es-PE",
   "availableService": [
-    {"@type":"MedicalProcedure","name":"Diagnóstico integral"},
-    {"@type":"MedicalProcedure","name":"Rehabilitación oral"},
-    {"@type":"MedicalProcedure","name":"Blanqueamiento dental"},
-    {"@type":"MedicalProcedure","name":"Prevención y tratamiento de caries"},
-    {"@type":"MedicalProcedure","name":"Carillas dentales"},
-    {"@type":"MedicalProcedure","name":"Tratamiento de desgaste dental y bruxismo"}
+    {
+      "@type": "MedicalProcedure",
+      "name": "Diagnóstico integral"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Rehabilitación oral"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Blanqueamiento dental"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Prevención y tratamiento de caries"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Carillas dentales"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Tratamiento de desgaste dental y bruxismo"
+    }
   ],
   "sameAs": [
     "https://www.instagram.com/odontologiavargasv",
-    "https://www.facebook.com/profile.php?id=61588420507476"
-  ]
+    "https://www.facebook.com/profile.php?id=61588420507476",
+    "https://www.google.com/maps/place/Odontolog%C3%ADa+Vargas+Valdez/@-12.0849845,-77.0521738,805m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9105b9f95b62da8b:0x658fc4c5022e73c0!8m2!3d-12.0849845!4d-77.0521738!16s%2Fg%2F11nr51ch5g"
+  ],
+  "hasMap": "https://www.google.com/maps/place/Odontolog%C3%ADa+Vargas+Valdez/@-12.0849845,-77.0521738,805m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9105b9f95b62da8b:0x658fc4c5022e73c0!8m2!3d-12.0849845!4d-77.0521738!16s%2Fg%2F11nr51ch5g"
 }
 </script>
 </head>
@@ -99,7 +113,7 @@
 <!-- ====== CABECERA ====== -->
 <header class="mast"><div class="wrap mast-in">
   <a class="brand" href="/" aria-label="Odontología Vargas Valdez, inicio"><span class="mark" aria-hidden="true"><svg viewBox="8 4 43 48" xmlns="http://www.w3.org/2000/svg"><path class="v-back" d="M25 28 L33 44 L45 16"/><path class="v-front" d="M15 24 L23 41 L36 11"/></svg></span><span class="brand-text"><b>Odontología Vargas Valdez</b><span>Jesús María · Lima</span></span></a>
-  <nav>
+  <nav aria-label="Principal">
     <a href="#consultorio">El consultorio</a>
     <a href="#tratamientos">Tratamientos</a>
     <a href="blog.html">Blog</a>
@@ -111,7 +125,7 @@
   </a>
 </div></header>
 
-<main id="contenido">
+<main id="contenido" tabindex="-1">
 
 <!-- ====== HERO ====== -->
 <div class="hero"><div class="wrap hero-grid">
@@ -123,8 +137,9 @@
         <span>Desde 1970, sin mudarnos de barrio.</span>
       </div>
     </div>
-    <h1>La misma consulta, la misma familia, tres generaciones de pacientes.</h1>
-    <p class="lead">Aquí no hay tratamientos de catálogo. Hay un diagnóstico, una conversación y un plan que se explica hasta que se entiende.</p>
+    <h1>Tu dentista en Jesús María, desde 1970.</h1>
+    <p class="lead">Atención en Residencial San Felipe. Conversemos sobre tu consulta y coordinemos una evaluación en el consultorio.</p>
+    <div class="hero-actions"><a class="btn btn-wa" href="https://wa.me/51987484791?text=Hola%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">Coordinar cita por WhatsApp</a><a class="location-link" href="#ubicacion">Ver ubicación y cómo llegar</a></div>
     <p class="sig">Dirige <b>Dr. Eladio Vargas Torres</b> · Cirujano dentista</p>
   </div>
 
@@ -144,7 +159,7 @@
 <div class="databar"><div class="wrap databar-in">
   <div class="cell">
     <div class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.3 7-11a7 7 0 10-14 0c0 4.7 7 11 7 11z" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6"/></svg>Dónde</div>
-    <div class="val">Residencial San Felipe,<br>Jesús María — Lima</div>
+    <div class="val">Las Palmeras 103,<br>Jesús María — Lima</div>
   </div>
   <div class="cell">
     <div class="lab"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2" stroke-linecap="round"/></svg>Citas</div>
@@ -230,12 +245,14 @@
   </blockquote>
 </div></section>
 
+<section class="block location" id="ubicacion"><div class="wrap"><p class="kicker">Cómo llegar</p><h2>Estamos en Jesús María.</h2><address>Las Palmeras 103 · Residencial San Felipe<br>Jesús María, Lima 15076</address><a class="location-link" href="https://www.google.com/maps/place/Odontolog%C3%ADa+Vargas+Valdez/@-12.0849845,-77.0521738,805m/data=!3m2!1e3!4b1!4m6!3m5!1s0x9105b9f95b62da8b:0x658fc4c5022e73c0!8m2!3d-12.0849845!4d-77.0521738!16s%2Fg%2F11nr51ch5g" target="_blank" rel="noopener">Ver ubicación en Google Maps</a><p>Atendemos con cita coordinada por WhatsApp.</p></div></section>
+
 <!-- ====== CITAS ====== -->
 <section class="block close" id="citas"><div class="wrap close-grid">
   <div>
     <p class="kicker">Citas</p>
     <h2>Escríbenos y coordinamos.</h2>
-    <p>Cuéntanos qué te está molestando y vemos tu caso. Respondemos por WhatsApp, sin compromiso.</p>
+    <p>Escríbenos para consultar disponibilidad y coordinar tu cita. La evaluación se realiza en el consultorio.</p>
   </div>
   <div class="btns">
     <a class="btn btn-wa" href="https://wa.me/51987484791?text=Hola%2C%20quisiera%20agendar%20una%20evaluaci%C3%B3n." target="_blank" rel="noopener">
@@ -267,7 +284,7 @@
       </div>
     </div>
     <div>
-      <nav>
+      <nav aria-label="Pie de página">
         <a href="#consultorio">El consultorio</a>
         <a href="#tratamientos">Tratamientos</a>
         <a href="blog.html">Blog</a>

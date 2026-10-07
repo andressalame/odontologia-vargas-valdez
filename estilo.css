@@ -276,3 +276,27 @@ img{max-width:100%;display:block}
 
 /* impresión */
 @media print{.wabar,.mast nav,.telbtn{display:none}body{background:#fff}}
+
+/* Citas y navegación accesibles, octubre 2026. */
+html{scroll-padding-bottom:90px}
+.hero-actions{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px}
+.hero-actions .btn{font-size:16px;padding:14px 18px}
+.location-link{display:inline-flex;align-items:center;min-height:44px;color:var(--clay);font-size:16px;font-weight:700;text-decoration:underline;text-underline-offset:4px}
+.location{background:var(--tint);border-bottom:1px solid var(--rule)}
+.location h2{font-size:30px;margin:10px 0 16px}
+.location address{font-style:normal;margin-bottom:12px}
+.location p{margin-top:12px;color:var(--ink-70);font-size:16px}
+.foot nav a,.mast nav a{min-height:44px;display:inline-flex;align-items:center}
+.wabar{padding:10px 16px calc(10px + env(safe-area-inset-bottom))}
+@media(max-width:939px){
+ .mast-in{flex-wrap:wrap;gap:8px 14px}
+ .mast .brand{flex:1 1 180px}
+ .mast nav{display:flex;order:3;width:100%;flex-wrap:wrap;gap:0 20px;border-top:1px solid var(--rule);font-size:14px}
+ .mast .telbtn{font-size:14px}
+ .portrait{aspect-ratio:auto;min-height:210px}
+ .portrait .mono{padding-bottom:70px}
+ .hero h1{max-width:20ch}
+ .foot{padding-bottom:calc(108px + env(safe-area-inset-bottom))}
+}
+@media(max-width:359px){.databar-in{grid-template-columns:1fr}.databar .cell{border-right:0;border-bottom:1px solid var(--rule)}.databar .cell:last-child{border-bottom:0}}
+@media(prefers-reduced-motion:reduce){.faq summary::after{transition:none}}
