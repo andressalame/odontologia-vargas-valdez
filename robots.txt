@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
 
+# Resumen del sitio para asistentes de IA: https://www.odontologiavargasvaldez.com/llms.txt
 Sitemap: https://www.odontologiavargasvaldez.com/sitemap.xml
